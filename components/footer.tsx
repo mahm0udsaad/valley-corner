@@ -1,8 +1,14 @@
+'use client'
+
 import Image from "next/image"
 import Link from "next/link"
 import { MapPin, Phone, Mail } from "lucide-react"
+import { useTranslate } from "@/lib/i18n-client"
 
 export default function Footer() {
+  const { t } = useTranslate()
+  const currentYear = new Date().getFullYear()
+  
   return (
     <footer className="bg-gray-900 text-white py-12">
       <div className="container mx-auto px-4">
@@ -10,97 +16,97 @@ export default function Footer() {
           <div>
             <Image
               src="/images/logo.png"
-              alt="Valley Corner Travel & Tourism"
+              alt={t('general.siteName')}
               width={150}
               height={150}
               className="mb-4"
             />
-            <p className="text-gray-400">Your trusted partner for unforgettable travel experiences.</p>
+            <p className="text-gray-400">{t('footer.tagline')}</p>
           </div>
 
           <div>
-            <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
+            <h3 className="text-lg font-semibold mb-4">{t('footer.quickLinks')}</h3>
             <ul className="space-y-2">
               <li>
                 <Link href="#about" className="text-gray-400 hover:text-white transition-colors">
-                  About Us
+                  {t('navigation.about')}
                 </Link>
               </li>
               <li>
                 <Link href="#services" className="text-gray-400 hover:text-white transition-colors">
-                  Services
+                  {t('navigation.services')}
                 </Link>
               </li>
               <li>
                 <Link href="#offers" className="text-gray-400 hover:text-white transition-colors">
-                  Special Offers
+                  {t('navigation.offers')}
                 </Link>
               </li>
               <li>
                 <Link href="#testimonials" className="text-gray-400 hover:text-white transition-colors">
-                  Testimonials
+                  {t('navigation.testimonials')}
                 </Link>
               </li>
               <li>
                 <Link href="#contact" className="text-gray-400 hover:text-white transition-colors">
-                  Contact Us
+                  {t('navigation.contact')}
                 </Link>
               </li>
             </ul>
           </div>
 
           <div>
-            <h3 className="text-lg font-semibold mb-4">Popular Destinations</h3>
+            <h3 className="text-lg font-semibold mb-4">{t('footer.popularDestinations')}</h3>
             <ul className="space-y-2">
               <li>
                 <Link href="/packages/istanbul-turkey" className="text-gray-400 hover:text-white transition-colors">
-                  Turkey
+                  {t('footer.turkey')}
                 </Link>
               </li>
               <li>
                 <Link href="/packages/georgia" className="text-gray-400 hover:text-white transition-colors">
-                  Georgia
+                  {t('footer.georgia')}
                 </Link>
               </li>
               <li>
                 <Link href="/packages/bosnia" className="text-gray-400 hover:text-white transition-colors">
-                  Bosnia
+                  {t('footer.bosnia')}
                 </Link>
               </li>
               <li>
                 <Link href="/packages/cairo-egypt" className="text-gray-400 hover:text-white transition-colors">
-                  Egypt
+                  {t('footer.egypt')}
                 </Link>
               </li>
               <li>
                 <Link href="/packages/azerbaijan" className="text-gray-400 hover:text-white transition-colors">
-                  Azerbaijan
+                  {t('footer.azerbaijan')}
                 </Link>
               </li>
             </ul>
           </div>
 
           <div>
-            <h3 className="text-lg font-semibold mb-4">Contact</h3>
+            <h3 className="text-lg font-semibold mb-4">{t('contact.title')}</h3>
             <ul className="space-y-2">
               <li className="flex items-start gap-2">
                 <MapPin className="h-5 w-5 text-blue-400 mt-1 shrink-0" />
-                <span className="text-gray-400">Al-Khobar, Al-Aqrabiah district, Saudi Arabia</span>
+                <span className="text-gray-400">{t('contact.address.value')}</span>
               </li>
               <li className="flex items-center gap-2">
                 <Phone className="h-5 w-5 text-blue-400 shrink-0" />
-                <span className="text-gray-400">+966 510 490 506</span>
+                <span className="text-gray-400">{t('contact.phone.value1')}</span>
               </li>
               <li className="flex items-center gap-2">
                 <Mail className="h-5 w-5 text-blue-400 shrink-0" />
-                <span className="text-gray-400">info@valleytravelcorner.com</span>
+                <span className="text-gray-400">{t('contact.email.value')}</span>
               </li>
             </ul>
           </div>
         </div>
 
         <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
-          <p>&copy; {new Date().getFullYear()} Valley Corner Travel & Tourism. All rights reserved.</p>
+          <p>&copy; {currentYear} {t('general.siteName')}. {t('footer.copyright')}</p>
         </div>
       </div>
     </footer>

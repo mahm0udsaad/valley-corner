@@ -1,0 +1,121 @@
+{
+  "general": {
+    "siteName": "Valley Corner Travel & Tourism",
+    "siteDescription": "Your trusted partner for unforgettable travel experiences",
+    "bookNow": "Book Now",
+    "viewDetails": "View Details",
+    "viewAllPackages": "View All Packages",
+    "sendMessage": "Send Message",
+    "explore": "Explore Packages",
+    "contactUs": "Contact Us"
+  },
+  "navigation": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "offers": "Offers",
+    "testimonials": "Testimonials",
+    "contact": "Contact Us"
+  },
+  "hero": {
+    "title": "Valley Corner Travel & Tourism",
+    "subtitle": "Your trusted partner for unforgettable travel experiences"
+  },
+  "about": {
+    "title": "About Us",
+    "companyName": "Valley Corner Travel & Tourism",
+    "description1": "Valley Corner Travel & Tourism is a Saudi company specializing in providing travel and tourism services with high professionalism and international standards. We work to provide the best booking solutions for international and domestic flights, in addition to organizing foreign tourist trips, extracting visas, and hotel reservations around the world.",
+    "description2": "We aim to make the travel experience easier and more luxurious for our customers through customized services, continuous support, and special offers that suit all needs and budgets. We are your partners in every journey, from the moment of planning until returning with unforgettable memories.",
+    "visionTitle": "Our Vision",
+    "vision": "To be among the leaders in the travel and tourism sector at the Kingdom and regional level, by providing innovative services and integrated travel experiences that live up to the aspirations of customers, and enhance the Kingdom's position as a tourist destination."
+  },
+  "services": {
+    "title": "Our Services",
+    "subtitle": "We offer a comprehensive range of travel and tourism services to make your journey seamless and enjoyable.",
+    "flightBookings": {
+      "title": "Flight Bookings",
+      "description": "Domestic and international flight bookings with the best airlines at competitive prices."
+    },
+    "hotelReservations": {
+      "title": "Hotel Reservations",
+      "description": "Book accommodations worldwide, from luxury hotels to budget-friendly options."
+    },
+    "visaServices": {
+      "title": "Visa Services",
+      "description": "Hassle-free visa processing for various countries with expert guidance."
+    },
+    "tourismPackages": {
+      "title": "Tourism Packages",
+      "description": "Customized tourism packages for individuals, families, and groups to various destinations."
+    },
+    "carRentals": {
+      "title": "Car Rentals",
+      "description": "Car rental services with or without drivers for convenient transportation."
+    },
+    "cruiseBookings": {
+      "title": "Cruise Bookings",
+      "description": "Luxury cruise packages to various destinations with all-inclusive options."
+    }
+  },
+  "offers": {
+    "title": "Special Offers",
+    "subtitle": "Explore our exclusive travel packages and special offers to popular destinations.",
+    "tabs": {
+      "middleEast": "Middle East",
+      "europe": "Europe",
+      "asia": "Asia",
+      "cruises": "Cruises"
+    }
+  },
+  "testimonials": {
+    "title": "What Our Clients Say",
+    "subtitle": "Hear from our satisfied customers about their experiences with Valley Corner Travel & Tourism."
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Get in touch with us for inquiries, bookings, or any assistance you need.",
+    "ourInformation": "Our Information",
+    "reachOut": "Reach out to us through any of these channels",
+    "address": {
+      "title": "Address",
+      "value": "Al-Khobar, Al-Aqrabiah district, 10th Street, next to Al-Tannura Fish Restaurant, Kingdom of Saudi Arabia"
+    },
+    "phone": {
+      "title": "Phone",
+      "value1": "+966 510 490 506",
+      "value2": "+966 56 298 2415"
+    },
+    "email": {
+      "title": "Email",
+      "value": "info@valleytravelcorner.com"
+    },
+    "socialMedia": {
+      "title": "Social Media"
+    },
+    "form": {
+      "title": "Send Us a Message",
+      "subtitle": "Fill out the form below and we'll get back to you as soon as possible",
+      "name": "Name",
+      "email": "Email",
+      "phone": "Phone",
+      "subject": "Subject",
+      "message": "Message",
+      "send": "Send Message"
+    }
+  },
+  "footer": {
+    "tagline": "Your trusted partner for unforgettable travel experiences.",
+    "quickLinks": "Quick Links",
+    "popularDestinations": "Popular Destinations",
+    "turkey": "Turkey",
+    "georgia": "Georgia",
+    "bosnia": "Bosnia",
+    "egypt": "Egypt",
+    "azerbaijan": "Azerbaijan",
+    "copyright": "All rights reserved."
+  },
+  "language": {
+    "switchTo": "عربي",
+    "label": "Language"
+  }
+} 

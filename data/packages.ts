@@ -22,6 +22,210 @@ export interface TravelPackage {
 
 export const travelPackages: TravelPackage[] = [
   {
+    id: "georgia",
+    title: "Georgia",
+    destination: "Georgia",
+    category: "europe",
+    days: "6 Days",
+    description: "Tbilisi, Bakuriani, Batumi, breakfast included",
+    price: "3,150 SAR",
+    priceDetail: "for two persons",
+    image: "/images/Georgia.jpg",
+    video: "/videos/georgia.mp4",
+    featured: true,
+    highlights: [
+      "Explore the charming old town of Tbilisi",
+      "Visit the ancient Narikala Fortress",
+      "Experience the beautiful mountain resort of Bakuriani",
+      "Enjoy the Black Sea coast in Batumi",
+    ],
+    inclusions: [
+      "Airport transfers",
+      "5 nights accommodation",
+      "Daily breakfast",
+      "Tbilisi city tour",
+      "Transportation between cities",
+      "Local guide",
+    ],
+    itinerary: [
+      {
+        day: 1,
+        title: "Arrival in Tbilisi",
+        description:
+          "Arrival at Tbilisi International Airport, meet and assist, transfer to your hotel. Rest of the day at leisure.",
+      },
+      {
+        day: 2,
+        title: "Tbilisi City Tour",
+        description:
+          "Full day exploring Tbilisi including the Old Town, Narikala Fortress, Abanotubani (Bath District), and the Holy Trinity Cathedral.",
+      },
+      {
+        day: 3,
+        title: "Transfer to Bakuriani",
+        description: "Travel to the mountain resort of Bakuriani. Afternoon at leisure to enjoy the mountain scenery.",
+      },
+      {
+        day: 4,
+        title: "Bakuriani to Batumi",
+        description:
+          "Morning in Bakuriani, then transfer to the coastal city of Batumi. Evening walk along the Boulevard.",
+      },
+      {
+        day: 5,
+        title: "Batumi City Tour",
+        description:
+          "Explore Batumi including Batumi Boulevard, Piazza Square, and the Botanical Garden. Free time for beach activities.",
+      },
+      {
+        day: 6,
+        title: "Return to Tbilisi and Departure",
+        description:
+          "Morning transfer back to Tbilisi. Free time until transfer to Tbilisi International Airport for departure.",
+      },
+    ],
+    gallery: [
+      "/images/Georgia.jpg",
+      "/images/Georgia 1.jpg",
+      "/images/Georgia  2.jpg",
+      "/images/Georgia 3.jpg",
+    ],
+  },
+  {
+    id: "bosnia",
+    title: "Bosnia",
+    destination: "Bosnia and Herzegovina",
+    category: "europe",
+    days: "7 Nights",
+    description: "Sarajevo, breakfast included, airport transfers",
+    price: "2,500 SAR",
+    priceDetail: "per person in double/triple room",
+    image: "/images/Bosnia.jpeg",
+    video: "/videos/bosnia.mp4",
+    featured: true,
+    highlights: [
+      "Explore the historic city of Sarajevo",
+      "Visit the famous Stari Most (Old Bridge) in Mostar",
+      "Experience the beautiful nature of Bosnia",
+      "Learn about the rich cultural heritage",
+    ],
+    inclusions: [
+      "Airport transfers",
+      "7 nights accommodation",
+      "Daily breakfast",
+      "Sarajevo city tour",
+      "Mostar day trip",
+      "Local guide",
+    ],
+    itinerary: [
+      {
+        day: 1,
+        title: "Arrival in Sarajevo",
+        description:
+          "Arrival at Sarajevo International Airport, meet and assist, transfer to your hotel. Welcome dinner.",
+      },
+      {
+        day: 2,
+        title: "Sarajevo City Tour",
+        description: "Full day exploring Sarajevo including Baščaršija, Gazi Husrev-beg Mosque, and the Tunnel Museum.",
+      },
+      {
+        day: 3,
+        title: "Mostar Day Trip",
+        description: "Day trip to Mostar to see the iconic Old Bridge and historic old town.",
+      },
+      {
+        day: 4,
+        title: "Travnik and Jajce Tour",
+        description: "Visit the historic towns of Travnik and Jajce with their Ottoman architecture and waterfalls.",
+      },
+      {
+        day: 5,
+        title: "Blagaj and Počitelj",
+        description: "Explore the Dervish monastery at Blagaj and the fortress town of Počitelj.",
+      },
+      {
+        day: 6,
+        title: "Visoko Pyramids",
+        description: "Optional tour to the controversial Visoko Pyramids or free day in Sarajevo.",
+      },
+      {
+        day: 7,
+        title: "Free Day",
+        description: "Free day for shopping and personal activities in Sarajevo.",
+      },
+      {
+        day: 8,
+        title: "Departure",
+        description: "Breakfast at hotel, free time until transfer to Sarajevo International Airport for departure.",
+      },
+    ],
+    gallery: [
+      "/images/Bosnia.jpeg",
+      "/images/Bosnia 2.jpeg",
+      "/images/Bosnia 3.jpg",
+      "/images/Bosnia 4.jpeg",
+      "/images/Bosnia 5.jpg",
+    ],
+  },
+  {
+    id: "azerbaijan",
+    title: "Azerbaijan",
+    destination: "Azerbaijan",
+    category: "asia",
+    days: "4 Days",
+    description: "Baku, airport transfers included",
+    price: "1,900 SAR",
+    priceDetail: "for two persons",
+    image: "/images/Azerbaijan.webp",
+    video: "/videos/Azerbaijan.mp4",
+    featured: false,
+    highlights: [
+      "Explore the modern city of Baku",
+      "Visit the UNESCO-listed Old City (Icherisheher)",
+      "See the iconic Flame Towers",
+      "Experience Azerbaijani culture and cuisine",
+    ],
+    inclusions: [
+      "Airport transfers",
+      "3 nights accommodation",
+      "Daily breakfast",
+      "Baku city tour",
+      "Old City tour",
+      "Local guide",
+    ],
+    itinerary: [
+      {
+        day: 1,
+        title: "Arrival in Baku",
+        description:
+          "Arrival at Heydar Aliyev International Airport, meet and assist, transfer to your hotel. Evening walk along Baku Boulevard.",
+      },
+      {
+        day: 2,
+        title: "Baku City Tour",
+        description:
+          "Full day exploring Baku including the Old City (Icherisheher), Maiden Tower, Shirvanshah's Palace, and Flame Towers.",
+      },
+      {
+        day: 3,
+        title: "Gobustan and Mud Volcanoes",
+        description: "Day trip to Gobustan National Park to see ancient rock carvings and mud volcanoes.",
+      },
+      {
+        day: 4,
+        title: "Departure",
+        description:
+          "Breakfast at hotel, free time until transfer to Heydar Aliyev International Airport for departure.",
+      },
+    ],
+    gallery: [
+      "/images/Azerbaijan.webp",
+      "/images/Azerbaijan 1.jpg",
+      "/images/Azerbaijan 2.jpg",
+    ],
+  },
+  {
     id: "cairo-egypt",
     title: "Cairo, Egypt",
     destination: "Egypt",
@@ -30,7 +234,8 @@ export const travelPackages: TravelPackage[] = [
     description: "Nile view hotel, airport transfer, double room",
     price: "1,400 SAR",
     priceDetail: "per person in double room",
-    image: "/cairo-pyramids-nile.png",
+    image: "/images/egypt.jpg",
+    video: "/videos/egypt.mp4",
     featured: true,
     highlights: [
       "Visit the Great Pyramids of Giza and the Sphinx",
@@ -72,10 +277,10 @@ export const travelPackages: TravelPackage[] = [
       },
     ],
     gallery: [
-      "/cairo-pyramids-nile.png",
-      "/placeholder.svg?key=cairo1",
-      "/placeholder.svg?key=cairo2",
-      "/placeholder.svg?key=cairo3",
+      "/images/egypt.jpg",
+      "/images/egypt-1.jpg",
+      "/images/egypt-2.jpg",
+      "/images/egypt-3.jpg",
     ],
   },
   {
@@ -88,6 +293,7 @@ export const travelPackages: TravelPackage[] = [
     price: "2,500 SAR",
     priceDetail: "for two persons",
     image: "/images/turkey.jpg",
+    video: "/videos/turkey.mp4",
     featured: true,
     highlights: [
       "Visit the iconic Blue Mosque and Hagia Sophia",
@@ -150,6 +356,7 @@ export const travelPackages: TravelPackage[] = [
     price: "2,000 SAR",
     priceDetail: "for two persons",
     image: "/images/turkey (2).jpg",
+    video: "/videos/turkey.mp4",
     featured: false,
     highlights: [
       "Visit the historic Sumela Monastery",
@@ -200,82 +407,6 @@ export const travelPackages: TravelPackage[] = [
     ],
   },
   {
-    id: "bosnia",
-    title: "Bosnia",
-    destination: "Bosnia and Herzegovina",
-    category: "europe",
-    days: "7 Nights",
-    description: "Sarajevo, breakfast included, airport transfers",
-    price: "2,500 SAR",
-    priceDetail: "per person in double/triple room",
-    image: "/placeholder.svg?key=s57s3",
-    video: "/videos/bosnia.mp4",
-    featured: true,
-    highlights: [
-      "Explore the historic city of Sarajevo",
-      "Visit the famous Stari Most (Old Bridge) in Mostar",
-      "Experience the beautiful nature of Bosnia",
-      "Learn about the rich cultural heritage",
-    ],
-    inclusions: [
-      "Airport transfers",
-      "7 nights accommodation",
-      "Daily breakfast",
-      "Sarajevo city tour",
-      "Mostar day trip",
-      "Local guide",
-    ],
-    itinerary: [
-      {
-        day: 1,
-        title: "Arrival in Sarajevo",
-        description:
-          "Arrival at Sarajevo International Airport, meet and assist, transfer to your hotel. Welcome dinner.",
-      },
-      {
-        day: 2,
-        title: "Sarajevo City Tour",
-        description: "Full day exploring Sarajevo including Baščaršija, Gazi Husrev-beg Mosque, and the Tunnel Museum.",
-      },
-      {
-        day: 3,
-        title: "Mostar Day Trip",
-        description: "Day trip to Mostar to see the iconic Old Bridge and historic old town.",
-      },
-      {
-        day: 4,
-        title: "Travnik and Jajce Tour",
-        description: "Visit the historic towns of Travnik and Jajce with their Ottoman architecture and waterfalls.",
-      },
-      {
-        day: 5,
-        title: "Blagaj and Počitelj",
-        description: "Explore the Dervish monastery at Blagaj and the fortress town of Počitelj.",
-      },
-      {
-        day: 6,
-        title: "Visoko Pyramids",
-        description: "Optional tour to the controversial Visoko Pyramids or free day in Sarajevo.",
-      },
-      {
-        day: 7,
-        title: "Free Day",
-        description: "Free day for shopping and personal activities in Sarajevo.",
-      },
-      {
-        day: 8,
-        title: "Departure",
-        description: "Breakfast at hotel, free time until transfer to Sarajevo International Airport for departure.",
-      },
-    ],
-    gallery: [
-      "/placeholder.svg?key=s57s3",
-      "/placeholder.svg?key=bosnia1",
-      "/placeholder.svg?key=bosnia2",
-      "/placeholder.svg?key=bosnia3",
-    ],
-  },
-  {
     id: "albania",
     title: "Albania",
     destination: "Albania",
@@ -284,7 +415,8 @@ export const travelPackages: TravelPackage[] = [
     description: "Airport transfers and tours included",
     price: "4,500 SAR",
     priceDetail: "for two persons",
-    image: "/albanian-coastline-mountains.png",
+    image: "/images/Albanian.jpg",
+    video: "/videos/albanian.mp4",
     featured: false,
     highlights: [
       "Explore the capital city Tirana",
@@ -325,10 +457,11 @@ export const travelPackages: TravelPackage[] = [
       },
     ],
     gallery: [
-      "/albanian-coastline-mountains.png",
-      "/placeholder.svg?key=albania1",
-      "/placeholder.svg?key=albania2",
-      "/placeholder.svg?key=albania3",
+      "/images/Albanian.jpg",
+      "/images/albanian 1.jpg",
+      "/images/Albanian 2.jpg",
+      "/images/albanian 3.jpg",
+      "/images/Albanian 4.jpg",
     ],
   },
   {
@@ -340,7 +473,8 @@ export const travelPackages: TravelPackage[] = [
     description: "Hotel in the heart of Duomo",
     price: "2,800 SAR",
     priceDetail: "per person in double room",
-    image: "/milan-duomo-cathedral.png",
+    image: "/images/italy.jpg",
+    video: "/videos/italy.mp4",
     featured: true,
     highlights: [
       "Visit the magnificent Milan Cathedral (Duomo)",
@@ -382,137 +516,11 @@ export const travelPackages: TravelPackage[] = [
       },
     ],
     gallery: [
-      "/milan-duomo-cathedral.png",
-      "/placeholder.svg?key=milan1",
-      "/placeholder.svg?key=milan2",
-      "/placeholder.svg?key=milan3",
-    ],
-  },
-  {
-    id: "georgia",
-    title: "Georgia",
-    destination: "Georgia",
-    category: "asia",
-    days: "6 Days",
-    description: "Tbilisi, Bakuriani, Batumi, breakfast included",
-    price: "3,150 SAR",
-    priceDetail: "for two persons",
-    image: "/tbilisi-old-town-river.png",
-    video: "/videos/georgia.mp4",
-    featured: true,
-    highlights: [
-      "Explore the charming old town of Tbilisi",
-      "Visit the ancient Narikala Fortress",
-      "Experience the beautiful mountain resort of Bakuriani",
-      "Enjoy the Black Sea coast in Batumi",
-    ],
-    inclusions: [
-      "Airport transfers",
-      "5 nights accommodation",
-      "Daily breakfast",
-      "Tbilisi city tour",
-      "Transportation between cities",
-      "Local guide",
-    ],
-    itinerary: [
-      {
-        day: 1,
-        title: "Arrival in Tbilisi",
-        description:
-          "Arrival at Tbilisi International Airport, meet and assist, transfer to your hotel. Rest of the day at leisure.",
-      },
-      {
-        day: 2,
-        title: "Tbilisi City Tour",
-        description:
-          "Full day exploring Tbilisi including the Old Town, Narikala Fortress, Abanotubani (Bath District), and the Holy Trinity Cathedral.",
-      },
-      {
-        day: 3,
-        title: "Transfer to Bakuriani",
-        description: "Travel to the mountain resort of Bakuriani. Afternoon at leisure to enjoy the mountain scenery.",
-      },
-      {
-        day: 4,
-        title: "Bakuriani to Batumi",
-        description:
-          "Morning in Bakuriani, then transfer to the coastal city of Batumi. Evening walk along the Boulevard.",
-      },
-      {
-        day: 5,
-        title: "Batumi City Tour",
-        description:
-          "Explore Batumi including Batumi Boulevard, Piazza Square, and the Botanical Garden. Free time for beach activities.",
-      },
-      {
-        day: 6,
-        title: "Return to Tbilisi and Departure",
-        description:
-          "Morning transfer back to Tbilisi. Free time until transfer to Tbilisi International Airport for departure.",
-      },
-    ],
-    gallery: [
-      "/tbilisi-old-town-river.png",
-      "/placeholder.svg?key=georgia1",
-      "/placeholder.svg?key=georgia2",
-      "/placeholder.svg?key=georgia3",
-    ],
-  },
-  {
-    id: "azerbaijan",
-    title: "Azerbaijan",
-    destination: "Azerbaijan",
-    category: "asia",
-    days: "4 Days",
-    description: "Baku, airport transfers included",
-    price: "1,900 SAR",
-    priceDetail: "for two persons",
-    image: "/placeholder.svg?key=zv99k",
-    featured: false,
-    highlights: [
-      "Explore the modern city of Baku",
-      "Visit the UNESCO-listed Old City (Icherisheher)",
-      "See the iconic Flame Towers",
-      "Experience Azerbaijani culture and cuisine",
-    ],
-    inclusions: [
-      "Airport transfers",
-      "3 nights accommodation",
-      "Daily breakfast",
-      "Baku city tour",
-      "Old City tour",
-      "Local guide",
-    ],
-    itinerary: [
-      {
-        day: 1,
-        title: "Arrival in Baku",
-        description:
-          "Arrival at Heydar Aliyev International Airport, meet and assist, transfer to your hotel. Evening walk along Baku Boulevard.",
-      },
-      {
-        day: 2,
-        title: "Baku City Tour",
-        description:
-          "Full day exploring Baku including the Old City (Icherisheher), Maiden Tower, Shirvanshah's Palace, and Flame Towers.",
-      },
-      {
-        day: 3,
-        title: "Gobustan and Mud Volcanoes",
-        description: "Day trip to Gobustan National Park to see ancient rock carvings and mud volcanoes.",
-      },
-      {
-        day: 4,
-        title: "Departure",
-        description:
-          "Breakfast at hotel, free time until transfer to Heydar Aliyev International Airport for departure.",
-      },
-    ],
-    gallery: [
-      "/placeholder.svg?key=zv99k",
-      "/placeholder.svg?key=azerbaijan1",
-      "/placeholder.svg?key=azerbaijan2",
-      "/placeholder.svg?key=azerbaijan3",
+      "/images/italy.jpg",
+      "/images/italy2.jpg",
+      "/images/italy 3.jpg",
+      "/images/italy4.jpg",
+      "/images/italy 5.jpg",
     ],
   },
   {
@@ -524,7 +532,8 @@ export const travelPackages: TravelPackage[] = [
     description: "5-star hotel with breakfast, airport transfers and tours",
     price: "3,500 SAR",
     priceDetail: "for two persons",
-    image: "/mauritius-beach-resort.png",
+    image: "/images/Mauritius.jpg",
+    video: "/videos/Mauritius.mp4",
     featured: true,
     highlights: [
       "Relax on pristine white sand beaches",
@@ -573,10 +582,9 @@ export const travelPackages: TravelPackage[] = [
       },
     ],
     gallery: [
-      "/mauritius-beach-resort.png",
-      "/placeholder.svg?key=mauritius1",
-      "/placeholder.svg?key=mauritius2",
-      "/placeholder.svg?key=mauritius3",
+      "/images/Mauritius.jpg",
+      "/images/Mauritius 1.webp",
+      "/images/Mauritius 3.jpg",
     ],
   },
   {
@@ -588,7 +596,8 @@ export const travelPackages: TravelPackage[] = [
     description: "Departing from Jeddah, double cabin with balcony, all meals and drinks included",
     price: "6,600 SAR",
     priceDetail: "for two persons during Eid",
-    image: "/placeholder.svg?key=uuh20",
+    image: "/images/Aroya Cruise.webp",
+    video: "/videos/Aroya Cruise.mp4",
     featured: true,
     highlights: [
       "Luxury cruise experience on the Red Sea",
@@ -647,10 +656,10 @@ export const travelPackages: TravelPackage[] = [
       },
     ],
     gallery: [
-      "/placeholder.svg?key=uuh20",
-      "/placeholder.svg?key=cruise1",
-      "/placeholder.svg?key=cruise2",
-      "/placeholder.svg?key=cruise3",
+      "/images/Aroya Cruise.webp",
+      "/images/Aroya Cruise 1.jpg",
+      "/images/Aroya Cruise 3.webp",
+      "/images/Aroya Cruise 4.jpg",
     ],
   },
   {
@@ -713,6 +722,74 @@ export const travelPackages: TravelPackage[] = [
       "/images/mosco (3).jpg",
       "/images/mosco (4).jpg",
       "/images/mosco (5).jpg",
+    ],
+  },
+  {
+    id: "cairo-summer",
+    title: "Cairo Summer Special",
+    destination: "Egypt",
+    category: "middle-east",
+    days: "6 Days",
+    description: "5 nights at Cairo Taj Hotel, daily breakfast, private tours, airport transfers",
+    price: "2,800 SAR",
+    priceDetail: "per person in double room",
+    image: "/images/cairo.jpg",
+    featured: true,
+    highlights: [
+      "Stay at 4-star Cairo Taj Hotel in Dokki",
+      "Enjoy a Nile River cruise",
+      "Visit the iconic Cairo Tower",
+      "Explore modern and ancient Cairo",
+      "Experience the Great Pyramids of Giza",
+      "Shop at Khan El Khalili and modern malls",
+    ],
+    inclusions: [
+      "5 nights accommodation at Cairo Taj Hotel 4-star",
+      "Daily breakfast",
+      "Free WiFi in hotel",
+      "Airport transfers",
+      "Egypt SIM card with internet and local calls",
+      "Private car for all tours",
+      "All entrance fees to mentioned attractions",
+    ],
+    itinerary: [
+      {
+        day: 1,
+        title: "The Beating Heart of Cairo",
+        description: "Visit Cairo Tower, enjoy a Nile River cruise, and explore Ahl Misr Walkway.",
+      },
+      {
+        day: 2,
+        title: "Modern and Ancient Cairo",
+        description: "Explore Cairo Festival City, Al-Muizz Street, visit Sahib Al Saada restaurant, Um Kulthum Café, and Khan El Khalili.",
+      },
+      {
+        day: 3,
+        title: "The Seven Wonders",
+        description: "Visit the Great Pyramids of Giza and Sphinx, explore Mall of Egypt, and experience Ghazal Al Reem Village.",
+      },
+      {
+        day: 4,
+        title: "New Cairo Magic",
+        description: "Visit Family Park, Open Air Mall in Madinaty, and The Waterway in Tagamoa.",
+      },
+      {
+        day: 5,
+        title: "Free Day",
+        description: "Free day to explore Cairo at your own pace or enjoy optional activities.",
+      },
+      {
+        day: 6,
+        title: "Departure",
+        description: "Breakfast at hotel, free time until transfer to Cairo International Airport for departure.",
+      },
+    ],
+    gallery: [
+      "/images/cairo.jpg",
+      "/images/cairo 1.jpg",
+      "/images/cairo 2.jpg",
+      "/images/cairo 3.jpg",
+      "/images/cairo 4.jpg",
     ],
   },
 ]
