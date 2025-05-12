@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     siteName: 'Valley Corner Travel & Tourism',
     images: [
       {
-        url: './public/images/hero.jpg',
+        url: './../public/images/hero.jpg',
         width: 1200,
         height: 630,
         alt: 'Valley Corner Travel & Tourism Hero Image',
