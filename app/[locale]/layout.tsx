@@ -1,11 +1,9 @@
 import React from 'react'
-import "../globals.css"
 import type { Metadata } from "next"
-import { Inter } from "next/font/google"
 import ClientLayout from "@/components/client-layout"
+import WhatsAppButton from "@/components/whatsapp-button"
 import type { Language } from "@/lib/types"
 
-const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://valleytravelcorner.com'),
@@ -69,9 +67,9 @@ export const metadata: Metadata = {
   },
 }
 
-// Generate static params for supported locales
+// Generate static params for supported locales - putting Arabic first makes it the default
 export async function generateStaticParams() {
-  return [{ locale: 'en' }, { locale: 'ar' }]
+  return [{ locale: 'ar' }, { locale: 'en' }]
 }
 
 export default async function LocaleLayout({
@@ -86,12 +84,9 @@ export default async function LocaleLayout({
   const dir = localeTyped === 'ar' ? 'rtl' : 'ltr'
   
   return (
-    <html lang={localeTyped} dir={dir} suppressHydrationWarning>
-      <body className={`${inter.className} ${localeTyped === 'ar' ? 'font-arabic' : ''}`}>
         <ClientLayout locale={localeTyped}>
           {children}
+          <WhatsAppButton />
         </ClientLayout>
-      </body>
-    </html>
   )
 } 

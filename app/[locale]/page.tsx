@@ -77,61 +77,7 @@ export default async function Home({
           </div>
         </div>
       </section>
-     {/* Special Offers Section */}
-     <section className="py-20 bg-white" id="offers">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">{t('offers.title')}</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              {t('offers.subtitle')}
-            </p>
-            <div className="w-20 h-1 bg-blue-600 mx-auto mt-4"></div>
-          </div>
-
-          <Tabs defaultValue="europe" className="w-full">
-            <TabsList className="grid w-full max-w-2xl mx-auto md:grid-cols-4 mb-12 relative z-10 bg-white shadow-sm">
-              <TabsTrigger value="europe">{t('offers.tabs.europe')}</TabsTrigger>
-              <TabsTrigger value="middle-east">{t('offers.tabs.middleEast')}</TabsTrigger>
-              <TabsTrigger value="asia">{t('offers.tabs.asia')}</TabsTrigger>
-              <TabsTrigger value="cruises">{t('offers.tabs.cruises')}</TabsTrigger>
-            </TabsList>
-
-            <TabsContent value="europe" className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 relative z-0">
-              {europePackages.map((pkg) => (
-                <PackageCard key={pkg.id} packageData={pkg} locale={localeTyped} />
-              ))}
-            </TabsContent>
-
-            <TabsContent value="middle-east" className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 relative z-0">
-              {middleEastPackages.map((pkg) => (
-                <PackageCard key={pkg.id} packageData={pkg} locale={localeTyped} />
-              ))}
-            </TabsContent>
-
-            <TabsContent value="asia" className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 relative z-0">
-              {asiaPackages.map((pkg) => (
-                <PackageCard key={pkg.id} packageData={pkg} locale={localeTyped} />
-              ))}
-            </TabsContent>
-
-            <TabsContent value="cruises" className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 relative z-0">
-              {cruisesPackages.map((pkg) => (
-                <PackageCard key={pkg.id} packageData={pkg} locale={localeTyped} />
-              ))}
-            </TabsContent>
-          </Tabs>
-
-          <div className="text-center mt-12">
-            <Link href="/packages">
-              <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
-                {t('general.viewAllPackages')}
-              </Button>
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* About Section */}
+            {/* About Section */}
       <section className="py-20 bg-white" id="about">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -205,6 +151,61 @@ export default async function Home({
         </div>
       </section>
 
+     {/* Special Offers Section */}
+     <section className="py-20 bg-white" id="offers">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">{t('offers.title')}</h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              {t('offers.subtitle')}
+            </p>
+            <div className="w-20 h-1 bg-blue-600 mx-auto mt-4"></div>
+          </div>
+
+          <Tabs defaultValue="europe" className="w-full">
+            <TabsList className="grid w-full max-w-2xl mx-auto md:grid-cols-4 mb-12 relative z-10 bg-white shadow-sm">
+              <TabsTrigger value="europe">{t('offers.tabs.europe')}</TabsTrigger>
+              <TabsTrigger value="middle-east">{t('offers.tabs.middleEast')}</TabsTrigger>
+              <TabsTrigger value="asia">{t('offers.tabs.asia')}</TabsTrigger>
+              <TabsTrigger value="cruises">{t('offers.tabs.cruises')}</TabsTrigger>
+            </TabsList>
+
+            <TabsContent value="europe" className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 relative z-0">
+              {europePackages.map((pkg) => (
+                <PackageCard key={pkg.id} packageData={pkg} locale={localeTyped} />
+              ))}
+            </TabsContent>
+
+            <TabsContent value="middle-east" className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 relative z-0">
+              {middleEastPackages.map((pkg) => (
+                <PackageCard key={pkg.id} packageData={pkg} locale={localeTyped} />
+              ))}
+            </TabsContent>
+
+            <TabsContent value="asia" className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 relative z-0">
+              {asiaPackages.map((pkg) => (
+                <PackageCard key={pkg.id} packageData={pkg} locale={localeTyped} />
+              ))}
+            </TabsContent>
+
+            <TabsContent value="cruises" className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 relative z-0">
+              {cruisesPackages.map((pkg) => (
+                <PackageCard key={pkg.id} packageData={pkg} locale={localeTyped} />
+              ))}
+            </TabsContent>
+          </Tabs>
+
+          <div className="text-center mt-12">
+            <Link href="/packages">
+              <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
+                {t('general.viewAllPackages')}
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+
  
       {/* Testimonials Section */}
       <section className="py-20 bg-gray-50" id="testimonials">
@@ -274,7 +275,6 @@ export default async function Home({
                     <div>
                       <h4 className="text-lg font-semibold text-gray-900">{t('contact.phoneTitle')}</h4>
                       <p className="mt-1 text-gray-600">+966 510 490 506</p>
-                      <p className="text-gray-600">+966 56 298 2415</p>
                     </div>
                   </div>
 
@@ -284,7 +284,7 @@ export default async function Home({
                     </div>
                     <div>
                       <h4 className="text-lg font-semibold text-gray-900">{t('contact.emailTitle')}</h4>
-                      <p className="mt-1 text-gray-600">info@valleytravelcorner.com</p>
+                      <p className="mt-1 text-gray-600">valleycornertravel@gmail.com</p>
                     </div>
                     </div>
                   </div>

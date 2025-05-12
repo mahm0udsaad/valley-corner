@@ -235,7 +235,7 @@ export const travelPackages: TravelPackage[] = [
     price: "1,400 SAR",
     priceDetail: "per person in double room",
     image: "/images/egypt.jpg",
-    video: "/videos/egypt.mp4",
+    video: "/videos/cairo.mp4",
     featured: true,
     highlights: [
       "Visit the Great Pyramids of Giza and the Sphinx",
@@ -734,6 +734,7 @@ export const travelPackages: TravelPackage[] = [
     price: "2,800 SAR",
     priceDetail: "per person in double room",
     image: "/images/cairo.jpg",
+    video: "/videos/cairo.mp4",
     featured: true,
     highlights: [
       "Stay at 4-star Cairo Taj Hotel in Dokki",
