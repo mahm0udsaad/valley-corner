@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     siteName: 'Valley Corner Travel & Tourism',
     images: [
       {
-        url: './public/hero.jpg',
+        url: './public/images/hero.jpg',
         width: 1200,
         height: 630,
         alt: 'Valley Corner Travel & Tourism Hero Image',
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Valley Corner Travel & Tourism',
     description: 'Your trusted partner for unforgettable travel experiences. Discover our exclusive travel packages and services.',
-    images: ['/hero.jpg'],
+    images: ['./../public/images/hero.jpg'],
     creator: '@corner_tra12256',
   },
   robots: {
