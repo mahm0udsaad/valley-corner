@@ -77,36 +77,7 @@ export default async function Home({
           </div>
         </div>
       </section>
-            {/* About Section */}
-      <section className="py-20 bg-white" id="about">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">{t('about.title')}</h2>
-            <div className="w-20 h-1 bg-blue-600 mx-auto"></div>
-          </div>
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h3 className="text-2xl font-semibold mb-4">{t('about.companyName')}</h3>
-              <p className="text-gray-700 mb-6">
-                {t('about.description1')}
-              </p>
-              <p className="text-gray-700 mb-6">
-                {t('about.description2')}
-              </p>
-              <div className="bg-blue-50 p-6 rounded-lg border-l-4 border-blue-600">
-                <h4 className="text-xl font-semibold mb-2">{t('about.visionTitle')}</h4>
-                <p className="text-gray-700">
-                  {t('about.vision')}
-                </p>
-              </div>
-            </div>
-            <div className="relative h-[500px] rounded-xl overflow-hidden">
-              <Image src="/luxury-travel-agency.png" alt="Our office" fill className="object-cover rounded-xl" />
-            </div>
-          </div>
-        </div>
-      </section>
-
+   
       {/* Services Section */}
       <section className="py-20" id="services">
         <div className="container mx-auto px-4">
@@ -229,6 +200,37 @@ export default async function Home({
           </div>
         </div>
       </section>
+          {/* About Section */}
+          <section className="py-20 bg-white" id="about">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">{t('about.title')}</h2>
+            <div className="w-20 h-1 bg-blue-600 mx-auto"></div>
+          </div>
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <h3 className="text-2xl font-semibold mb-4">{t('about.companyName')}</h3>
+              <p className="text-gray-700 mb-6">
+                {t('about.description1')}
+              </p>
+              <p className="text-gray-700 mb-6">
+                {t('about.description2')}
+              </p>
+              <div className="bg-blue-50 p-6 rounded-lg border-l-4 border-blue-600">
+                <h4 className="text-xl font-semibold mb-2">{t('about.visionTitle')}</h4>
+                <p className="text-gray-700">
+                  {t('about.vision')}
+                </p>
+              </div>
+            </div>
+            <div className="relative h-[500px] rounded-xl overflow-hidden">
+              <Image src="/luxury-travel-agency.png" alt="Our office" fill className="object-cover rounded-xl" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+
 
       {/* Contact Section */}
       <section className="py-20" id="contact">
