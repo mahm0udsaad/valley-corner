@@ -1,0 +1,10 @@
+# Allow all crawlers
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://valleytravelcorner.com/sitemap.xml
+
+# Disallow crawling of admin and api routes
+Disallow: /api/*
+Disallow: /admin/* 
