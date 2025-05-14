@@ -3,7 +3,6 @@ import { Button } from "@/components/ui/button"
 import PackageCard from "@/components/package-card"
 import { travelPackages } from "@/data/packages"
 import { travelPackages as arabicPackages } from "@/data/packages.ar"
-import Footer from "@/components/footer"
 import { initTranslations } from "@/lib/i18n-server"
 import { Language } from "@/lib/types"
 

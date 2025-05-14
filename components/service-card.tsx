@@ -28,12 +28,6 @@ export default function ServiceCard({ service, locale, t }: ServiceCardProps) {
           <p className="text-gray-600 group-hover:text-gray-700 text-base">
             {t(service.descriptionKey)}
           </p>
-          <div className="mt-4 flex items-center text-blue-600 opacity-0 group-hover:opacity-100 transition-all duration-300 -mb-2 font-medium text-sm">
-            {t('general.learnMore')}
-            <svg className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
-            </svg>
-          </div>
         </CardContent>
       </Card>
     </div>

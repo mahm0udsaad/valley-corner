@@ -8,7 +8,7 @@
     "sendMessage": "Send Message",
     "explore": "Explore Packages",
     "contactUs": "Contact Us",
-    "learnMore": "Learn More"
+    "sending": "Sending..."
   },
   "navigation": {
     "home": "Home",
@@ -28,12 +28,14 @@
     "description1": "Valley Corner Travel & Tourism is a Saudi company specializing in providing travel and tourism services with high professionalism and international standards. We work to provide the best booking solutions for international and domestic flights, in addition to organizing foreign tourist trips, extracting visas, and hotel reservations around the world.",
     "description2": "We aim to make the travel experience easier and more luxurious for our customers through customized services, continuous support, and special offers that suit all needs and budgets. We are your partners in every journey, from the moment of planning until returning with unforgettable memories.",
     "visionTitle": "Our Vision",
-    "vision": "To be among the leaders in the travel and tourism sector at the Kingdom and regional level, by providing innovative services and integrated travel experiences that live up to the aspirations of customers, and enhance the Kingdom's position as a tourist destination."
+    "vision": "To be among the leaders in the travel and tourism sector at the Kingdom and regional level, by providing innovative services and integrated travel experiences that live up to the aspirations of customers, and enhance the Kingdom's position as a tourist destination.",
+    "commercialRegister": "Commercial Registration Certificate",
+    "registerNumber": "Commercial Registration Number"
   },
   "services": {
     "title": "Our Services",
-    "subtitle": "Comprehensive Travel Solutions",
-    "description": "We offer a complete range of travel services to make your journey seamless and enjoyable",
+    "subtitle": "We offer a comprehensive range of travel and tourism services to make your journey seamless and enjoyable.",
+    "description": "Discover our wide range of premium travel services designed to meet all your needs.",
     "requestService": "Request Service",
     "viewPackages": "View Packages",
     "flightBookings": {
@@ -46,19 +48,19 @@
     },
     "visaServices": {
       "title": "Visa Services",
-      "description": "Hassle-free visa processing for various countries with expert guidance and documentation support."
+      "description": "Hassle-free visa processing for various countries with expert guidance."
     },
     "tourismPackages": {
       "title": "Tourism Packages",
-      "description": "Customized tourism packages for individuals, families, and groups with personalized itineraries."
+      "description": "Customized tourism packages for individuals, families, and groups to various destinations."
     },
     "carRentals": {
       "title": "Car Rentals",
-      "description": "Car rental services with or without drivers for convenient transportation and exploration."
+      "description": "Car rental services with or without drivers for convenient transportation."
     },
     "cruiseBookings": {
       "title": "Cruise Bookings",
-      "description": "Luxury cruise packages to various destinations with all-inclusive options and exclusive experiences."
+      "description": "Luxury cruise packages to various destinations with all-inclusive options."
     }
   },
   "offers": {
@@ -76,52 +78,118 @@
     "subtitle": "Hear from our satisfied customers about their experiences with Valley Corner Travel & Tourism.",
     "clients": [
       {
-        "name": "Rashid",
-        "quote": "Thank you Valley Corner Travel, you didn't fall short with us at all, your arrangement for the trip was perfect."
+        "name": "Sarah Johnson",
+        "quote": "Our family trip to Turkey was amazing! Valley Corner Travel handled everything perfectly, from flights to hotels and guided tours. Highly recommended!"
       },
       {
-        "name": "Noura",
-        "quote": "My experience with you was amazing! Thank you from the heart, Valley Corner Travel."
+        "name": "Mohammed Al-Harbi",
+        "quote": "The team at Valley Corner Travel went above and beyond to make our honeymoon in the Maldives unforgettable. Exceptional service from start to finish."
       },
       {
-        "name": "Abdullah",
-        "quote": "One of the best companies I've dealt with, sophisticated work and excellent service, thank you."
-      },
-      {
-        "name": "Fatima",
-        "quote": "Thank you so much for the good organization and attention to the smallest details, I will definitely deal with you again."
-      },
-      {
-        "name": "Saud",
-        "quote": "Thank you Valley Corner Travel, you relieved us from the burden of arrangements, everything was at the highest level."
-      },
-      {
-        "name": "Al-Anoud",
-        "quote": "Thank you all, I felt pampered because everything was so well arranged!"
+        "name": "Ahmed Khalid",
+        "quote": "As a frequent business traveler, I appreciate Valley Corner's attention to detail and prompt support. They've made my trips stress-free for years."
       }
     ]
+  },
+  "packages": {
+    "title": "Packages",
+    "description": "Discover our curated selection of travel packages to destinations around the world.",
+    "contactButton": "Contact Us",
+    "highlights": "Highlights",
+    "inclusions": "What's Included",
+    "itinerary": "Itinerary",
+    "gallery": "Photo Gallery",
+    "image": "Image",
+    "videoTour": "Video Tour",
+    "videoDescription": "Watch this video to get a glimpse of what awaits you in {destination}.",
+    "bookPackage": "Book This Package",
+    "bookingDescription": "Fill out the form below to inquire about this package. Our team will get back to you shortly.",
+    "numberOfTravelers": "Number of Travelers",
+    "preferredDate": "Preferred Travel Date",
+    "specialRequests": "Special Requests",
+    "submitInquiry": "Submit Inquiry",
+    "needHelp": "Need help or have questions?",
+    "youMayAlsoLike": "You May Also Like",
+    "backToAllPackages": "Back to All Packages",
+    "day": "Day",
+    "packagesTitle": "Travel Packages",
+    "packagesSubtitle": "Explore our curated selection of packages to destinations around the world.",
+    "filterBy": "Filter By",
+    "duration": "Duration",
+    "price": "Price",
+    "destination": "Destination",
+    "all": "All",
+    "days": "Days",
+    "nights": "Nights",
+    "applyFilter": "Apply Filter",
+    "resetFilter": "Reset Filter",
+    "noPackagesFound": "No packages found matching your criteria.",
+    "sortBy": "Sort By",
+    "priceHighToLow": "Price: High to Low",
+    "priceLowToHigh": "Price: Low to High",
+    "durationShortToLong": "Duration: Short to Long",
+    "durationLongToShort": "Duration: Long to Short",
+    "perPerson": "per person",
+    "startingFrom": "Starting from",
+    "duration_days_nights": "{days} Days / {nights} Nights",
+    "packageDetails": "Package Details",
+    "bookingDetails": "Booking Details",
+    "fullName": "Full Name",
+    "email": "Email Address",
+    "phone": "Phone Number",
+    "adults": "Adults",
+    "children": "Children",
+    "childrenAges": "Children Ages",
+    "departureDate": "Departure Date",
+    "returnDate": "Return Date",
+    "additionalRequests": "Additional Requests",
+    "termsAndConditions": "Terms and Conditions",
+    "iAgree": "I agree to the terms and conditions",
+    "proceedToPayment": "Proceed to Payment",
+    "includesFlights": "Includes Flights",
+    "includesHotel": "Includes Hotel",
+    "includesTransfers": "Includes Transfers",
+    "includesMeals": "Includes Meals",
+    "includesActivities": "Includes Activities",
+    "features": "Features",
+    "relatedPackages": "Related Packages",
+    "inquirySent": "Inquiry Sent!",
+    "inquirySentDescription": "Thank you for your interest in this package. We've received your inquiry and will get back to you as soon as possible.",
+    "sendAnotherInquiry": "Send Another Inquiry",
+    "errorMessage": "There was a problem sending your inquiry. Please try again or contact us directly by phone."
   },
   "contact": {
     "title": "Contact Us",
     "subtitle": "Get in touch with us for inquiries, bookings, or any assistance you need.",
-    "description": "Have questions or ready to plan your next adventure? We're here to help you every step of the way.",
-    "infoDescription": "Connect with us through any of these channels",
+    "description": "We're here to answer any questions you may have about our services.",
     "ourInformation": "Our Information",
+    "infoDescription": "Reach out to us through any of these channels",
     "reachOut": "Reach out to us through any of these channels",
+    "locationTitle": "Address",
+    "location": "Al-Khobar, Al-Aqrabiah district, 10th Street, next to Al-Tannura Fish Restaurant, Kingdom of Saudi Arabia",
+    "phoneTitle": "Phone",
+    "emailTitle": "Email",
+    "connectTitle": "Connect With Us",
+    "formTitle": "Send Us a Message",
+    "formDescription": "Fill out the form below and we'll get back to you as soon as possible",
+    "namePlaceholder": "Enter your name",
+    "emailPlaceholder": "Enter your email",
+    "phonePlaceholder": "Enter your phone number",
+    "subjectPlaceholder": "Enter the subject",
+    "messagePlaceholder": "Type your message here",
+    "messageSent": "Message Sent!",
+    "messageSentDescription": "Thank you for contacting us. We've received your message and will get back to you as soon as possible.",
+    "sendAnotherMessage": "Send Another Message",
+    "errorMessage": "There was a problem sending your message. Please try again or contact us directly by phone.",
     "address": {
       "title": "Address",
       "value": "Al-Khobar, Al-Aqrabiah district, 10th Street, next to Al-Tannura Fish Restaurant, Kingdom of Saudi Arabia"
     },
-    "locationTitle": "Our Location",
-    "location": "Al-Khobar, Al-Aqrabiah district, 10th Street, next to Al-Tannura Fish Restaurant, Kingdom of Saudi Arabia",
-    "phoneTitle": "Phone Numbers",
     "phone": {
       "title": "Phone",
       "value1": "+966 510 490 506",
       "value2": "+966 56 298 2415"
     },
-    "emailTitle": "Email Address",
-    "connectTitle": "Connect With Us",
     "email": {
       "title": "Email",
       "value": "valleycornertravel@gmail.com"
@@ -129,19 +197,6 @@
     "socialMedia": {
       "title": "Social Media"
     },
-    "formTitle": "Send Us a Message",
-    "formDescription": "Fill out the form below and we'll get back to you as soon as possible",
-    "nameLabel": "Your Name",
-    "emailLabel": "Email Address",
-    "phoneLabel": "Phone Number",
-    "subjectLabel": "Subject",
-    "messageLabel": "Your Message",
-    "namePlaceholder": "Enter your name",
-    "emailPlaceholder": "Enter your email",
-    "phonePlaceholder": "Enter your phone number",
-    "subjectPlaceholder": "What is this regarding?",
-    "messagePlaceholder": "Tell us about your travel needs or questions",
-    "sendButton": "Send Message",
     "form": {
       "title": "Send Us a Message",
       "subtitle": "Fill out the form below and we'll get back to you as soon as possible",
@@ -167,27 +222,5 @@
   "language": {
     "switchTo": "عربي",
     "label": "Language"
-  },
-  "packages": {
-    "title": "Our Travel Packages",
-    "description": "Explore our carefully curated selection of travel packages designed to provide you with unforgettable experiences and memories that will last a lifetime.",
-    "highlights": "Highlights",
-    "inclusions": "What's Included",
-    "itinerary": "Detailed Itinerary",
-    "gallery": "Photo Gallery",
-    "videoTour": "Video Tour",
-    "videoDescription": "Experience the beauty of {{destination}} through our video tour. Get a glimpse of what awaits you on this amazing journey.",
-    "bookPackage": "Book This Package",
-    "bookingDescription": "Fill out the form below to inquire about this package or contact us directly for more information.",
-    "numberOfTravelers": "Number of Travelers",
-    "preferredDate": "Preferred Travel Date",
-    "specialRequests": "Special Requests",
-    "submitInquiry": "Submit Inquiry",
-    "needHelp": "Need help? Contact us directly:",
-    "youMayAlsoLike": "You May Also Like",
-    "backToAllPackages": "Back to All Packages",
-    "day": "Day",
-    "image": "Image",
-    "contactButton": "Contact Us About Packages"
   }
 } 

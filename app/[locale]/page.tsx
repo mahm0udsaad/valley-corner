@@ -1,8 +1,4 @@
 import {
-  Plane,
-  Hotel,
-  CreditCard,
-  Car,
   MapPin,
   Phone,
   Mail,
@@ -22,9 +18,9 @@ import PackageCard from "@/components/package-card"
 import ServiceCard from "@/components/service-card"
 import { getPackagesByCategory } from "@/lib/utils"
 import { services } from "@/data/services"
-import Footer from "@/components/footer"
 import { Language } from "@/lib/types"
 import { initTranslations } from "@/lib/i18n-server"
+import HomeContactForm from "@/components/home-contact-form"
 
 export const dynamic = "force-static"
 
@@ -200,31 +196,54 @@ export default async function Home({
           </div>
         </div>
       </section>
-          {/* About Section */}
-          <section className="py-20 bg-white" id="about">
+          {/* About Us Section with Commercial Certificate */}
+          <section className="py-20 bg-gray-50" id="about">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">{t('about.title')}</h2>
-            <div className="w-20 h-1 bg-blue-600 mx-auto"></div>
+            <span className="bg-blue-100 text-blue-700 py-1 px-4 rounded-full text-sm font-semibold tracking-wide uppercase">{t('about.title')}</span>
+            <h2 className="text-3xl md:text-5xl font-bold mt-4 mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-700">
+              {t('about.companyName')}
+            </h2>
           </div>
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+          
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h3 className="text-2xl font-semibold mb-4">{t('about.companyName')}</h3>
-              <p className="text-gray-700 mb-6">
+              <p className="text-gray-700 mb-6 text-lg">
                 {t('about.description1')}
               </p>
-              <p className="text-gray-700 mb-6">
+              <p className="text-gray-700 mb-8 text-lg">
                 {t('about.description2')}
               </p>
-              <div className="bg-blue-50 p-6 rounded-lg border-l-4 border-blue-600">
-                <h4 className="text-xl font-semibold mb-2">{t('about.visionTitle')}</h4>
-                <p className="text-gray-700">
-                  {t('about.vision')}
-                </p>
+              
+              <div className="mb-6">
+                <h3 className="text-xl font-bold text-blue-700 mb-3">{t('about.visionTitle')}</h3>
+                <p className="text-gray-700">{t('about.vision')}</p>
               </div>
+              
+              <Link href="#contact">
+                <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white">
+                  {t('general.contactUs')}
+                </Button>
+              </Link>
             </div>
-            <div className="relative h-[500px] rounded-xl overflow-hidden">
-              <Image src="/luxury-travel-agency.png" alt="Our office" fill className="object-cover rounded-xl" />
+            
+            <div className="flex flex-col items-center">
+              <div className="max-w-md mx-auto rounded-lg overflow-hidden shadow-lg border border-gray-200 bg-white">
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-blue-700 mb-4 text-center">{t('about.commercialRegister')}</h3>
+                  <div className="border border-gray-200 rounded-md p-2">
+                    <Image 
+                      src="/images/certificates/commercial-register.jpg"
+                      alt={t('about.commercialRegister')}
+                      width={500}
+                      height={650}
+                      className="mx-auto rounded-md"
+                      priority
+                    />
+                  </div>
+                  <p className="text-center text-gray-500 mt-4 text-sm">{t('about.registerNumber')}: 7042867981</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -251,7 +270,7 @@ export default async function Home({
                 <div className="absolute inset-0 bg-blue-600 opacity-90"></div>
                 <div className="absolute inset-0 opacity-20" style={{ backgroundImage: "url('/images/map-pattern.png')", backgroundSize: "cover" }}></div>
                 <div className="relative p-8 text-white h-full flex flex-col justify-center">
-                  <h3 className="text-2xl font-bold mb-2">Our Information</h3>
+                  <h3 className="text-2xl font-bold mb-2">{t('contact.ourInformation')}</h3>
                   <p className="opacity-90">{t('contact.infoDescription')}</p>
                 </div>
               </div>
@@ -353,80 +372,7 @@ export default async function Home({
               </div>
             </div>
 
-            <div className="bg-white rounded-2xl shadow-xl p-8 transform transition-all duration-300 hover:shadow-2xl relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-40 h-40 -mr-12 -mt-12 bg-blue-100 rounded-full opacity-30"></div>
-              <div className="absolute bottom-0 left-0 w-32 h-32 -ml-10 -mb-10 bg-indigo-100 rounded-full opacity-30"></div>
-              
-              <div className="relative">
-                <h3 className="text-2xl font-bold mb-1 text-gray-900">{t('contact.formTitle')}</h3>
-                <p className="text-gray-600 mb-6">{t('contact.formDescription')}</p>
-                
-                <form className="space-y-4">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div className="space-y-2">
-                      <label htmlFor="name" className="text-sm font-medium">
-                        {t('contact.form.name')}
-                      </label>
-                      <input 
-                        id="name" 
-                        className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all" 
-                        placeholder={t('contact.namePlaceholder')}
-                      />
-                    </div>
-                    <div className="space-y-2">
-                      <label htmlFor="email" className="text-sm font-medium">
-                        {t('contact.form.email')}
-                      </label>
-                      <input 
-                        id="email" 
-                        type="email" 
-                        className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all" 
-                        placeholder={t('contact.emailPlaceholder')}
-                      />
-                    </div>
-                  </div>
-                  <div className="space-y-2">
-                    <label htmlFor="phone" className="text-sm font-medium">
-                      {t('contact.form.phone')}
-                    </label>
-                    <input 
-                      id="phone" 
-                      className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all" 
-                      placeholder={t('contact.phonePlaceholder')}
-                    />
-                  </div>
-                  <div className="space-y-2">
-                    <label htmlFor="subject" className="text-sm font-medium">
-                      {t('contact.form.subject')}
-                    </label>
-                    <input 
-                      id="subject" 
-                      className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all" 
-                      placeholder={t('contact.subjectPlaceholder')}
-                    />
-                  </div>
-                  <div className="space-y-2">
-                    <label htmlFor="message" className="text-sm font-medium">
-                      {t('contact.form.message')}
-                    </label>
-                    <textarea 
-                      id="message" 
-                      rows={4} 
-                      className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all" 
-                      placeholder={t('contact.messagePlaceholder')}
-                    ></textarea>
-                  </div>
-                  <div>
-                    <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 font-medium">
-                      {t('contact.form.send')}
-                      <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-                      </svg>
-                    </Button>
-                  </div>
-                </form>
-              </div>
-            </div>
+            <HomeContactForm />
           </div>
         </div>
       </section>

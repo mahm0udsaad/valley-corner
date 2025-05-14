@@ -2,11 +2,10 @@
 
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Loader2, CheckCircle, AlertCircle } from "lucide-react"
 import { useTranslate } from "@/lib/i18n-client"
 
-export default function ContactForm() {
+export default function HomeContactForm() {
   const { t } = useTranslate()
   const [formData, setFormData] = useState({
     name: '',
@@ -60,40 +59,44 @@ export default function ContactForm() {
 
   if (status === 'success') {
     return (
-      <Card className="bg-green-50 border-green-200">
-        <CardContent className="pt-6">
-          <div className="flex flex-col items-center justify-center py-10 text-center">
-            <CheckCircle className="w-16 h-16 text-green-500 mb-4" />
-            <h3 className="text-xl font-bold text-green-800">{t('contact.messageSent')}</h3>
-            <p className="text-green-700 mt-2 max-w-md">{t('contact.messageSentDescription')}</p>
-            <Button 
-              className="mt-6"
-              onClick={() => setStatus('idle')}
-            >
-              {t('contact.sendAnotherMessage')}
-            </Button>
-          </div>
-        </CardContent>
-      </Card>
+      <div className="bg-white rounded-2xl shadow-xl p-8 transform transition-all duration-300 hover:shadow-2xl relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-40 h-40 -mr-12 -mt-12 bg-green-100 rounded-full opacity-30"></div>
+        <div className="absolute bottom-0 left-0 w-32 h-32 -ml-10 -mb-10 bg-green-100 rounded-full opacity-30"></div>
+        
+        <div className="flex flex-col items-center justify-center py-10 text-center relative">
+          <CheckCircle className="w-20 h-20 text-green-500 mb-6" />
+          <h3 className="text-2xl font-bold text-green-800">{t('contact.messageSent')}</h3>
+          <p className="text-green-700 mt-2 max-w-md text-lg">{t('contact.messageSentDescription')}</p>
+          <Button 
+            className="mt-8 bg-green-600 hover:bg-green-700"
+            onClick={() => setStatus('idle')}
+          >
+            {t('contact.sendAnotherMessage')}
+          </Button>
+        </div>
+      </div>
     )
   }
 
   return (
-    <Card>
-      <CardHeader>
-        <CardTitle>{t('contact.form.title')}</CardTitle>
-        <CardDescription>{t('contact.form.subtitle')}</CardDescription>
-      </CardHeader>
-      <CardContent>
+    <div className="bg-white rounded-2xl shadow-xl p-8 transform transition-all duration-300 hover:shadow-2xl relative overflow-hidden">
+      <div className="absolute top-0 right-0 w-40 h-40 -mr-12 -mt-12 bg-blue-100 rounded-full opacity-30"></div>
+      <div className="absolute bottom-0 left-0 w-32 h-32 -ml-10 -mb-10 bg-indigo-100 rounded-full opacity-30"></div>
+      
+      <div className="relative">
+        <h3 className="text-2xl font-bold mb-1 text-gray-900">{t('contact.formTitle')}</h3>
+        <p className="text-gray-600 mb-6">{t('contact.formDescription')}</p>
+        
         <form className="space-y-4" onSubmit={handleSubmit}>
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="space-y-2">
               <label htmlFor="name" className="text-sm font-medium">
                 {t('contact.form.name')}
               </label>
               <input 
                 id="name" 
-                className="w-full p-2 border rounded-md" 
+                className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all" 
+                placeholder={t('contact.namePlaceholder')}
                 value={formData.name}
                 onChange={handleChange}
                 required
@@ -106,7 +109,8 @@ export default function ContactForm() {
               <input 
                 id="email" 
                 type="email" 
-                className="w-full p-2 border rounded-md" 
+                className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all" 
+                placeholder={t('contact.emailPlaceholder')}
                 value={formData.email}
                 onChange={handleChange}
                 required
@@ -119,7 +123,8 @@ export default function ContactForm() {
             </label>
             <input 
               id="phone" 
-              className="w-full p-2 border rounded-md" 
+              className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all" 
+              placeholder={t('contact.phonePlaceholder')}
               value={formData.phone}
               onChange={handleChange}
               required
@@ -131,7 +136,8 @@ export default function ContactForm() {
             </label>
             <input 
               id="subject" 
-              className="w-full p-2 border rounded-md" 
+              className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all" 
+              placeholder={t('contact.subjectPlaceholder')}
               value={formData.subject}
               onChange={handleChange}
               required
@@ -144,36 +150,44 @@ export default function ContactForm() {
             <textarea 
               id="message" 
               rows={4} 
-              className="w-full p-2 border rounded-md"
+              className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all" 
+              placeholder={t('contact.messagePlaceholder')}
               value={formData.message}
               onChange={handleChange}
               required
             ></textarea>
           </div>
+          
           {status === 'error' && (
             <div className="bg-red-50 border border-red-200 rounded-md p-3 flex items-start gap-2">
               <AlertCircle className="h-5 w-5 text-red-600 mt-0.5 shrink-0" />
               <p className="text-red-700 text-sm">{t('contact.errorMessage')}</p>
             </div>
           )}
+          
+          <div>
+            <Button 
+              type="submit"
+              className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 font-medium"
+              disabled={loading}
+            >
+              {loading ? (
+                <div className="flex items-center justify-center">
+                  <Loader2 className="mr-2 h-5 w-5 animate-spin" />
+                  {t('general.sending')}
+                </div>
+              ) : (
+                <div className="flex items-center justify-center">
+                  {t('contact.form.send')}
+                  <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                  </svg>
+                </div>
+              )}
+            </Button>
+          </div>
         </form>
-      </CardContent>
-      <CardFooter>
-        <Button 
-          className="w-full" 
-          onClick={handleSubmit}
-          disabled={loading}
-        >
-          {loading ? (
-            <>
-              <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-              {t('general.sending')}
-            </>
-          ) : (
-            t('contact.form.send')
-          )}
-        </Button>
-      </CardFooter>
-    </Card>
+      </div>
+    </div>
   )
-}
+} 

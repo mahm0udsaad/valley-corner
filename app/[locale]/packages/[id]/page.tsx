@@ -11,6 +11,7 @@ import PackageCard from "@/components/package-card"
 import Footer from "@/components/footer"
 import { initTranslations } from "@/lib/i18n-server"
 import { Language } from "@/lib/types"
+import PackageBookingForm from "@/components/package-booking-form"
 
 export const dynamic = "force-static"
 
@@ -152,63 +153,9 @@ export default async function PackageDetailPage({ params }: { params: Promise<{ 
             </div>
 
             <div>
-              <Card className="sticky top-24">
-                <CardContent className="p-6 space-y-6">
-                  <h3 className="text-xl font-bold">{t('packages.bookPackage')}</h3>
-                  <p className="text-gray-600">
-                    {t('packages.bookingDescription')}
-                  </p>
-
-                  <form className="space-y-4">
-                    <div className="space-y-2">
-                      <label htmlFor="name" className="text-sm font-medium">
-                        {t('contact.form.name')}
-                      </label>
-                      <input id="name" className="w-full p-2 border rounded-md" />
-                    </div>
-                    <div className="space-y-2">
-                      <label htmlFor="email" className="text-sm font-medium">
-                        {t('contact.form.email')}
-                      </label>
-                      <input id="email" type="email" className="w-full p-2 border rounded-md" />
-                    </div>
-                    <div className="space-y-2">
-                      <label htmlFor="phone" className="text-sm font-medium">
-                        {t('contact.form.phone')}
-                      </label>
-                      <input id="phone" className="w-full p-2 border rounded-md" />
-                    </div>
-                    <div className="space-y-2">
-                      <label htmlFor="travelers" className="text-sm font-medium">
-                        {t('packages.numberOfTravelers')}
-                      </label>
-                      <input id="travelers" type="number" min="1" className="w-full p-2 border rounded-md" />
-                    </div>
-                    <div className="space-y-2">
-                      <label htmlFor="date" className="text-sm font-medium">
-                        {t('packages.preferredDate')}
-                      </label>
-                      <input id="date" type="date" className="w-full p-2 border rounded-md" />
-                    </div>
-                    <div className="space-y-2">
-                      <label htmlFor="message" className="text-sm font-medium">
-                        {t('packages.specialRequests')}
-                      </label>
-                      <textarea id="message" rows={3} className="w-full p-2 border rounded-md"></textarea>
-                    </div>
-
-                    <Button className="w-full">{t('packages.submitInquiry')}</Button>
-                  </form>
-
-                  <div className="pt-4 border-t">
-                    <p className="text-sm text-gray-500 mb-2">{t('packages.needHelp')}</p>
-                    <div className="flex items-center gap-2 text-blue-600">
-                      <Phone className="h-4 w-4" />
-                      <span>+966 510 490 506</span>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
+              <div className="sticky top-24">
+                <PackageBookingForm packageName={packageData.title} />
+              </div>
             </div>
           </div>
 

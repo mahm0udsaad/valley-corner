@@ -4,15 +4,14 @@ import i18next from 'i18next'
 import { initReactI18next, useTranslation } from 'react-i18next'
 import resourcesToBackend from 'i18next-resources-to-backend'
 import LanguageDetector from 'i18next-browser-languagedetector'
-import { useState, useEffect, useCallback } from 'react'
+import {  useEffect, useCallback } from 'react'
 import { useParams, useRouter } from 'next/navigation'
 import type { Language } from './types'
 
-// Load resources from the locales directory
+// Load resources from the public/locales directory only
 const getResources = (locale: string, namespace: string) => {
   try {
-    return import(`@/public/locales/${locale}/${namespace}.json`)
-      .catch(() => import(`/locales/${locale}/${namespace}.json`))
+    return import(`./../public/locales/${locale}/${namespace}.json`)
   } catch (error) {
     console.error(`Failed to load translations for ${locale}/${namespace}`, error)
     return Promise.resolve({})
