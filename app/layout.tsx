@@ -1,50 +1,52 @@
-import React from 'react'
-import "./globals.css"
-import type { Metadata } from "next"
+import type { Metadata, Viewport } from "next"
 import { Inter } from "next/font/google"
+import "./globals.css"
+import ClientLayout from "@/components/client-layout"
 import WhatsAppButton from "@/components/whatsapp-button"
-import type { Language } from "@/lib/types"
+import TikTokPixel from "@/components/tiktok-pixel"
 
 const inter = Inter({ subsets: ["latin"] })
 
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+  themeColor: "#ffffff"
+}
+
 export const metadata: Metadata = {
-  metadataBase: new URL('https://valleytravelcorner.com'),
-  title: {
-    template: '%s | Valley Corner Travel & Tourism',
-    default: 'Valley Corner Travel & Tourism - Your Trusted Travel Partner'
-  },
-  description: 'Your trusted partner for unforgettable travel experiences. We offer comprehensive travel solutions including flight bookings, hotel reservations, tour packages, and visa services.',
-  keywords: ['travel agency', 'tourism', 'Saudi Arabia', 'travel packages', 'flight bookings', 'hotel reservations', 'visa services'],
-  authors: [{ name: 'Valley Corner Travel & Tourism' }],
-  creator: 'Valley Corner Travel & Tourism',
-  publisher: 'Valley Corner Travel & Tourism',
-  formatDetection: {
-    email: false,
-    address: false,
-    telephone: false,
-  },
+  title: "وادي الترفيه للسفر والسياحه | رحلات وعروض سياحية مميزة",
+  description: "وادي الترفيه للسفر والسياحه - شريكك الموثوق لتجارب سفر لا تُنسى. نقدم خدمات حجز الفنادق، تذاكر الطيران، الرحلات السياحية المنظمة، والبرامج السياحية المتكاملة بأفضل الأسعار",
+  keywords: "وادي الترفيه, وادي الترفيه للسفر, وادي الترفيه للسياحة, سفر, سياحة, حجز رحلات, عطلات, تذاكر طيران, فنادق, برامج سياحية, رحلات منظمة, سياحة خارجية, حجز فنادق, سياحة داخلية",
+  authors: [{ name: "وادي الترفيه للسفر والسياحه" }],
+  creator: "وادي الترفيه للسفر والسياحه",
+  publisher: "وادي الترفيه للسفر والسياحه",
   openGraph: {
-    type: 'website',
-    locale: 'en_US',
-    alternateLocale: 'ar_SA',
-    title: 'Valley Corner Travel & Tourism',
-    description: 'Your trusted partner for unforgettable travel experiences. Discover our exclusive travel packages and services.',
-    siteName: 'Valley Corner Travel & Tourism',
-    images: [
+    title: "وادي الترفيه للسفر والسياحه - رحلات وعروض سياحية مميزة",
+    description: "وادي الترفيه للسفر والسياحه - شريكك الموثوق لتجارب سفر لا تُنسى. نقدم خدمات حجز الفنادق، تذاكر الطيران، الرحلات السياحية المنظمة، والبرامج السياحية المتكاملة بأفضل الأسعار",
+    url: "https://www.valleycorner.com",
+    siteName: "وادي الترفيه للسفر والسياحه",
+    locale: "ar_SA",
+    type: "website",
+    images: [ 
       {
-        url: 'https://valley-corner.vercel.app/images/hero.jpg',
+        url: "https://www.valleycorner.com/images/hero.jpg",
         width: 1200,
         height: 630,
-        alt: 'Valley Corner Travel & Tourism Hero Image',
+        alt: "وادي الترفيه للسفر والسياحه"
       }
-    ],
+    ]
   },
   twitter: {
-    card: 'summary_large_image',
-    title: 'Valley Corner Travel & Tourism',
-    description: 'Your trusted partner for unforgettable travel experiences. Discover our exclusive travel packages and services.',
-    images: ['https://valley-corner.vercel.app/images/hero.jpg'],
-    creator: '@corner_tra12256',
+    card: "summary_large_image",
+    title: "وادي الترفيه للسفر والسياحه - رحلات وعروض سياحية مميزة",
+    description: "وادي الترفيه للسفر والسياحه - شريكك الموثوق لتجارب سفر لا تُنسى. نقدم خدمات حجز الفنادق، تذاكر الطيران، الرحلات السياحية المنظمة، والبرامج السياحية المتكاملة بأفضل الأسعار",
+    images: ["https://www.valleycorner.com/images/hero.jpg"],
+    creator: "@valleycorner",
+    site: "@valleycorner"
+  },
+  alternates: {
+    canonical: "https://www.valleycorner.com"
   },
   robots: {
     index: true,
@@ -52,44 +54,29 @@ export const metadata: Metadata = {
     googleBot: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
     },
   },
   verification: {
-    google: 'add-your-google-site-verification-here',
-  },
-  alternates: {
-    canonical: 'https://valleytravelcorner.com',
-    languages: {
-      'en-US': 'https://valleytravelcorner.com/en',
-      'ar-SA': 'https://valleytravelcorner.com/ar',
-    },
-  },
+    google: "google-site-verification-code",
+  }
 }
 
-// Generate static params for supported locales - putting Arabic first makes it the default
-export async function generateStaticParams() {
-  return [{ locale: 'ar' }, { locale: 'en' }]
-}
-
-export default async function LocaleLayout({
+export default async function RootLayout({
   children,
-  params,
 }: {
   children: React.ReactNode
-  params: Promise<{ locale: string }>
 }) {
-  const { locale } = await params
-  const localeTyped = locale as Language
-  const dir = localeTyped === 'ar' ? 'rtl' : 'ltr'
-  
   return (
-    <html lang={localeTyped} dir={dir} suppressHydrationWarning>
-      <body className={`${inter.className} ${localeTyped === 'ar' ? 'font-arabic' : ''}`}>
+    <html lang="ar" dir="rtl">
+      <body className={inter.className}>
+        <ClientLayout>
           {children}
-        <WhatsAppButton />
+          <WhatsAppButton />
+        </ClientLayout>
+        <TikTokPixel />
       </body>
     </html>
   )

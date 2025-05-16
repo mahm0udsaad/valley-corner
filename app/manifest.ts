@@ -2,9 +2,9 @@ import { MetadataRoute } from 'next'
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: 'Valley Corner Travel & Tourism',
-    short_name: 'Valley Corner',
-    description: 'Your trusted partner for unforgettable travel experiences',
+    name: 'وادي الترفيه للسفر والسياحه',
+    short_name: 'وادي الترفيه',
+    description: 'شريكك الموثوق لتجارب سفر لا تُنسى',
     start_url: '/',
     display: 'standalone',
     background_color: '#ffffff',

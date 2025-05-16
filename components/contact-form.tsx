@@ -4,10 +4,8 @@ import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Loader2, CheckCircle, AlertCircle } from "lucide-react"
-import { useTranslate } from "@/lib/i18n-client"
 
 export default function ContactForm() {
-  const { t } = useTranslate()
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -64,13 +62,13 @@ export default function ContactForm() {
         <CardContent className="pt-6">
           <div className="flex flex-col items-center justify-center py-10 text-center">
             <CheckCircle className="w-16 h-16 text-green-500 mb-4" />
-            <h3 className="text-xl font-bold text-green-800">{t('contact.messageSent')}</h3>
-            <p className="text-green-700 mt-2 max-w-md">{t('contact.messageSentDescription')}</p>
+            <h3 className="text-xl font-bold text-green-800">تم إرسال الرسالة!</h3>
+            <p className="text-green-700 mt-2 max-w-md">شكرًا للتواصل معنا. لقد استلمنا رسالتك وسنرد عليك في أقرب وقت ممكن.</p>
             <Button 
               className="mt-6"
               onClick={() => setStatus('idle')}
             >
-              {t('contact.sendAnotherMessage')}
+              إرسال رسالة أخرى
             </Button>
           </div>
         </CardContent>
@@ -81,15 +79,15 @@ export default function ContactForm() {
   return (
     <Card>
       <CardHeader>
-        <CardTitle>{t('contact.form.title')}</CardTitle>
-        <CardDescription>{t('contact.form.subtitle')}</CardDescription>
+        <CardTitle>أرسل لنا رسالة</CardTitle>
+        <CardDescription>املأ النموذج أدناه وسنرد عليك في أقرب وقت ممكن</CardDescription>
       </CardHeader>
       <CardContent>
         <form className="space-y-4" onSubmit={handleSubmit}>
           <div className="grid grid-cols-2 gap-4">
             <div className="space-y-2">
               <label htmlFor="name" className="text-sm font-medium">
-                {t('contact.form.name')}
+                الاسم
               </label>
               <input 
                 id="name" 
@@ -101,7 +99,7 @@ export default function ContactForm() {
             </div>
             <div className="space-y-2">
               <label htmlFor="email" className="text-sm font-medium">
-                {t('contact.form.email')}
+                البريد الإلكتروني
               </label>
               <input 
                 id="email" 
@@ -115,7 +113,7 @@ export default function ContactForm() {
           </div>
           <div className="space-y-2">
             <label htmlFor="phone" className="text-sm font-medium">
-              {t('contact.form.phone')}
+              رقم الهاتف
             </label>
             <input 
               id="phone" 
@@ -127,7 +125,7 @@ export default function ContactForm() {
           </div>
           <div className="space-y-2">
             <label htmlFor="subject" className="text-sm font-medium">
-              {t('contact.form.subject')}
+              الموضوع
             </label>
             <input 
               id="subject" 
@@ -139,7 +137,7 @@ export default function ContactForm() {
           </div>
           <div className="space-y-2">
             <label htmlFor="message" className="text-sm font-medium">
-              {t('contact.form.message')}
+              الرسالة
             </label>
             <textarea 
               id="message" 
@@ -153,7 +151,7 @@ export default function ContactForm() {
           {status === 'error' && (
             <div className="bg-red-50 border border-red-200 rounded-md p-3 flex items-start gap-2">
               <AlertCircle className="h-5 w-5 text-red-600 mt-0.5 shrink-0" />
-              <p className="text-red-700 text-sm">{t('contact.errorMessage')}</p>
+              <p className="text-red-700 text-sm">حدثت مشكلة أثناء إرسال رسالتك. يرجى المحاولة مرة أخرى أو الاتصال بنا مباشرة عبر الهاتف.</p>
             </div>
           )}
         </form>
@@ -167,10 +165,10 @@ export default function ContactForm() {
           {loading ? (
             <>
               <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-              {t('general.sending')}
+              جاري الإرسال...
             </>
           ) : (
-            t('contact.form.send')
+            'إرسال'
           )}
         </Button>
       </CardFooter>

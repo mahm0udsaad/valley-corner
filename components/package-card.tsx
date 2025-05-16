@@ -4,21 +4,16 @@ import Link from "next/link"
 import Image from "next/image"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { Clock, MapPin, Tag } from "lucide-react"
+import { Clock, MapPin } from "lucide-react"
 import type { TravelPackage } from "@/data/packages"
-import { useTranslate } from "@/lib/i18n-client"
-import { Language } from "@/lib/types"
 
 interface PackageCardProps {
   packageData: TravelPackage
-  locale: Language
 }
 
-export default function PackageCard({ packageData, locale }: PackageCardProps) {
-  const { t } = useTranslate()
-  
+export default function PackageCard({ packageData }: PackageCardProps) {
   return (
-    <Link href={`/${locale}/packages/${packageData.id}`} className="block group">
+    <Link href={`/packages/${packageData.id}`} className="block group">
       <Card className="overflow-hidden transition-all duration-300 h-full hover:shadow-xl border-transparent hover:border-blue-400 bg-white relative">
         {/* Add a gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-b from-blue-600/0 via-blue-600/0 to-blue-600/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"></div>
@@ -46,7 +41,7 @@ export default function PackageCard({ packageData, locale }: PackageCardProps) {
           </div>
         </div>
         
-        <CardContent className={`p-5 relative ${locale === 'ar' ? 'text-right' : 'text-left'}`}>
+        <CardContent className="p-5 relative text-right">
           {/* Main content */}
           <h3 className="text-xl font-bold mb-2 text-gray-900 group-hover:text-blue-700 transition-colors duration-300">
             {packageData.title}
@@ -62,14 +57,14 @@ export default function PackageCard({ packageData, locale }: PackageCardProps) {
           </p>
           
           {/* Bottom section with view details button */}
-          <div className={`flex ${locale === 'ar' ? 'justify-end' : 'justify-start'}`}>
+          <div className="flex justify-end">
             <Button 
               variant="outline" 
               size="sm"
               className="text-blue-600 border-blue-200 hover:bg-blue-50 hover:text-blue-700 hover:border-blue-300 group-hover:border-blue-500 transition-all duration-300"
             >
-              {t('general.viewDetails')}
-              <svg className={`w-4 h-4 mx-1.5 group-hover:${locale === 'ar' ? 'translate-x-[-2px]' : 'translate-x-[2px]'} transition-transform`} 
+              عرض التفاصيل
+              <svg className="w-4 h-4 mx-1.5 group-hover:translate-x-[-2px] transition-transform" 
                    fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
               </svg>

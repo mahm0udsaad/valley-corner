@@ -10,39 +10,39 @@ import {
 
 export interface Service {
   icon: LucideIcon
-  titleKey: string
-  descriptionKey: string
+  title: string
+  description: string
 }
 
 export const services: Service[] = [
   {
     icon: Plane,
-    titleKey: 'services.flightBookings.title',
-    descriptionKey: 'services.flightBookings.description'
+    title: 'حجز الطيران',
+    description: 'نقدم خدمات حجز تذاكر الطيران الدولية والداخلية بأفضل الأسعار وضمان أفضل الخدمات.'
   },
   {
     icon: Hotel,
-    titleKey: 'services.hotelReservations.title',
-    descriptionKey: 'services.hotelReservations.description'
+    title: 'حجز الفنادق',
+    description: 'احجز إقامتك في أفضل الفنادق حول العالم مع عروض حصرية وضمان أفضل الأسعار.'
   },
   {
     icon: CreditCard,
-    titleKey: 'services.visaServices.title',
-    descriptionKey: 'services.visaServices.description'
+    title: 'خدمات التأشيرات',
+    description: 'نساعدك في استخراج التأشيرات لجميع دول العالم بسرعة وكفاءة عالية.'
   },
   {
     icon: MapPin,
-    titleKey: 'services.tourismPackages.title',
-    descriptionKey: 'services.tourismPackages.description'
+    title: 'الباقات السياحية',
+    description: 'باقات سياحية متكاملة إلى مختلف الوجهات العالمية مع أفضل الخدمات والرعاية.'
   },
   {
     icon: Car,
-    titleKey: 'services.carRentals.title',
-    descriptionKey: 'services.carRentals.description'
+    title: 'تأجير السيارات',
+    description: 'خدمة تأجير السيارات في مختلف دول العالم مع أفضل الأسعار والخدمات.'
   },
   {
     icon: Ship,
-    titleKey: 'services.cruiseBookings.title',
-    descriptionKey: 'services.cruiseBookings.description'
+    title: 'حجز الرحلات البحرية',
+    description: 'رحلات بحرية مميزة إلى أجمل الوجهات العالمية مع أفضل شركات الرحلات البحرية.'
   }
 ] 
